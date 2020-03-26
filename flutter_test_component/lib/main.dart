@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../flutter_app_douban/lib/page/component/dashed_line_widget.dart';
+import 'dashed_line_widget.dart';
 import 'star_rating_widget.dart';
 
 void main() => runApp(MyApp());
