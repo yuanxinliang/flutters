@@ -55,12 +55,17 @@ class _MyContentPageState extends State<MyContentPage> {
         TextSpan(
           children: [
             WidgetSpan(
-              child: Icon(Icons.check_box_outline_blank, color: Colors.amber, size: 50),
+              child: Icon(
+                Icons.play_circle_outline, color: Colors.red, size: 50,),
               alignment: PlaceholderAlignment.middle,
             ),
-            TextSpan(text: '你是否同意此协议opop', style: TextStyle(fontSize: 25)),
-          ]
-        )
+            TextSpan(text: '  '),
+            TextSpan(text: 'honey',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            TextSpan(text: '1990',
+                style: TextStyle(fontSize: 14, color: Color(0xffaaaaaa))),
+          ],
+        ),
       ),
     );
   }
