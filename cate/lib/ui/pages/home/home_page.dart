@@ -5,7 +5,15 @@ class XLHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('首页')),
+      appBar: AppBar(
+        title: Text('美食广场'),
+        leading: GestureDetector(
+          child: Icon(Icons.drag_handle),
+          onTap: (){
+            Scaffold.of(context).openDrawer();
+          },
+        ),
+      ),
       body: XLHomeContent(),
     );
   }

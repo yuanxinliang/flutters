@@ -8,11 +8,11 @@ class XLMainTabBarSubWidgets {
 
   static final List<BottomNavigationBarItem> items = [
     BottomNavigationBarItem(
-      icon: Icon(Icons.home, size: 30,),
+      icon: Icon(Icons.home, size: 28,),
       title: Text('首页'),
     ),
     BottomNavigationBarItem(
-      icon: Icon(Icons.favorite_border, size: 30,),
+      icon: Icon(Icons.favorite_border, size: 28,),
       title: Text('收藏'),
     ),
   ];

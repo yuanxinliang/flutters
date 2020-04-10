@@ -52,7 +52,7 @@ class _XLHomeContentState extends State<XLHomeContent> {
       delegate: SliverChildBuilderDelegate((BuildContext context,
           int index) {
         var category = _categories[index];
-        return XLCategoryItem(category.cColor, category.title);
+        return XLCategoryItem(category.cColor, category.title, category: category);
       },
         childCount: _categories.length,
       ),

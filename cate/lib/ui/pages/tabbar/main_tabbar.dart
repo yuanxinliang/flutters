@@ -1,5 +1,6 @@
 import 'package:cate/ui/pages/tabbar/tabbar_children_item.dart';
 import 'package:flutter/material.dart';
+import 'main_drawer.dart';
 
 class XLMainTabBar extends StatefulWidget {
   static const String routerName = '/';
@@ -28,6 +29,7 @@ class _XLMainTabBarState extends State<XLMainTabBar> {
           });
         },
       ),
+      drawer: XLMainDrawer(),
     );
   }
 }
