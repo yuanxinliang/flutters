@@ -6,15 +6,24 @@ import 'package:cate/core/viewmodel/meal_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'core/viewmodel/favorite_view_model.dart';
+import 'package:flutter/foundation.dart';
 
 //void main() => runApp(MyApp());
 void main() {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (ctx) => XLMealViewModel()),
+//        ChangeNotifierProvider(create: (ctx) => XLMealViewModel()),
         ChangeNotifierProvider(create: (ctx) => XLFavoriteViewModel()),
         ChangeNotifierProvider(create: (ctx) => XLFilterViewModel()),
+        // 过滤：XLMealViewModel 依赖 XLFilterViewModel
+        ChangeNotifierProxyProvider<XLFilterViewModel, XLMealViewModel>(
+          create: (ctx) => XLMealViewModel(),
+          update: (ctx, filterVM, mealVM) {
+            mealVM.updateFilterVM(filterVM);
+            return mealVM;
+          },
+        ),
       ],
       child: MyApp(),
     ),
